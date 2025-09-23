@@ -18,13 +18,13 @@ def accuracy_on_aggregates(
     by: Optional[str] = None,
 ) -> Union[float, "pd.Series[Any]"]:
     """
-    Accuracy on aggregates: a fraction of worker's answers that match the aggregated one.
+    Accuracy on aggregates: A fraction of worker's answers that match the aggregated one.
 
     Args:
-        answers: a data frame containing `task`, `worker` and `label` columns.
-        aggregator: aggregation algorithm. default: MajorityVote
-        aggregates: aggregated answers for provided tasks.
-        by: if set, returns accuracies for every worker in provided data frame. Otherwise,
+        answers: A data frame containing `task`, `worker` and `label` columns.
+        aggregator: Aggregation algorithm. Default: MajorityVote
+        aggregates: Aggregated answers for provided tasks.
+        by: If set, returns accuracies for every worker in provided data frame. Otherwise,
             returns an average accuracy of all workers.
 
         Returns:

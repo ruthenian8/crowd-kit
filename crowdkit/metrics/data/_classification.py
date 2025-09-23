@@ -54,8 +54,8 @@ def consistency(
         answers (pandas.DataFrame): A data frame containing `task`, `worker` and `label` columns.
         workers_skills (Optional[pandas.Series]): Workers skills, e.g., golden set skills. If not provided,
             uses aggregator's `workers_skills` attribute.
-        aggregator (aggregation.base.BaseClassificationAggregator): aggregation method, default: MajorityVote
-        by_task (bool): if set, returns consistencies for every task in provided data frame.
+        aggregator (aggregation.base.BaseClassificationAggregator): Aggregation method, default: MajorityVote
+        by_task (bool): If set, returns consistencies for every task in provided data frame.
 
     Returns:
         Union[float, pd.Series]
