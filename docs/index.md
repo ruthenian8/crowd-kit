@@ -6,10 +6,10 @@
 
 Currently, Crowd-Kit contains:
 
-* implementations of commonly-used aggregation methods for categorical, pairwise, textual, and segmentation responses;
-* implementations of deep learning from crowds methods and advanced aggregation algorithms in PyTorch;
-* metrics of uncertainty, consistency, and agreement with aggregate;
-* loaders for popular crowdsourced datasets.
+- implementations of commonly-used aggregation methods for categorical, pairwise, textual, and segmentation responses;
+- implementations of deep learning from crowds methods and advanced aggregation algorithms in PyTorch;
+- metrics of uncertainty, consistency, and agreement with aggregate;
+- loaders for popular crowdsourced datasets.
 
 ## Installing
 
@@ -17,7 +17,7 @@ To install Crowd-Kit, run the following command: `pip install crowd-kit`. If you
 
 ## Getting Started
 
-Crowd-Kit's API resembles the one of scikit-learn. We recommend checking out our examples at <https://github.com/Toloka/crowd-kit/tree/main/examples>.
+Crowd-Kit's API resembles that of scikit-learn. We recommend checking out our examples at <https://github.com/Toloka/crowd-kit/tree/main/examples>.
 
 ## Citation
 

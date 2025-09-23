@@ -7,13 +7,13 @@ The current version of the CLA for individuals can be found at https://toloka.ai
 
 By adopting the CLA, you state the following:
 
-* You obviously wish and are willingly licensing your contributions to us for our open source projects under the terms of the CLA,
-* You have read the terms and conditions of the CLA and agree with them in full,
-* You are legally able to provide and license your contributions as stated,
-* We may use your contributions for our open source projects and for any other project too,
-* We rely on your assurances concerning the rights of third parties in relation to your contributions.
+- You obviously wish and are willingly licensing your contributions to us for our open source projects under the terms of the CLA,
+- You have read the terms and conditions of the CLA and agree with them in full,
+- You are legally able to provide and license your contributions as stated,
+- We may use your contributions for our open source projects and for any other project too,
+- We rely on your assurances concerning the rights of third parties in relation to your contributions.
 
-If you agree with these principles, please read and adopt our CLA. By providing us your contributions, you hereby declare that you have already read and adopt our CLA, and we may freely merge your contributions with our corresponding open source project and use it further in accordance with terms and conditions of the CLA.
+If you agree with these principles, please read and adopt our CLA. By providing us your contributions, you hereby declare that you have already read and adopted our CLA, and we may freely merge your contributions with our corresponding open source project and use it further in accordance with the terms and conditions of the CLA.
 
 ## Provide contributions
 

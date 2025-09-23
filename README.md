@@ -23,9 +23,9 @@
 
 Currently, Crowd-Kit contains:
 
-* implementations of commonly-used aggregation methods for categorical, pairwise, textual, and segmentation responses;
-* metrics of uncertainty, consistency, and agreement with aggregate;
-* loaders for popular crowdsourced datasets.
+- implementations of commonly-used aggregation methods for categorical, pairwise, textual, and segmentation responses;
+- metrics of uncertainty, consistency, and agreement with aggregate;
+- loaders for popular crowdsourced datasets.
 
 Also, the `learning` subpackage contains PyTorch implementations of deep learning from crowds methods and advanced aggregation algorithms.
 
@@ -151,7 +151,7 @@ Below is the list of currently implemented methods, including the already availa
 
 ## Support and Contributions
 
-Please use [GitHub Issues](https://github.com/Toloka/crowd-kit/issues) to seek support and submit feature requests. We accept contributions to Crowd-Kit via GitHub as according to our guidelines in [CONTRIBUTING.md](CONTRIBUTING.md).
+Please use [GitHub Issues](https://github.com/Toloka/crowd-kit/issues) to seek support and submit feature requests. We accept contributions to Crowd-Kit via GitHub according to our guidelines in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
