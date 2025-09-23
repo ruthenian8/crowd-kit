@@ -53,8 +53,8 @@ class HRRASA(BaseClassificationAggregator):
     |\mathcal{V}_k|)}}{\sum_i\left(\|e_i^k - \hat{e}_i\|^2/\gamma_i^k\right)}$, where $\mathcal{V}_k$
     is a set of tasks completed by the worker $k$.
 
-    **Step 4**. Estimate the aggregated result. It is the output which embedding is the closest one to
-    $\hat{e}_i$. If `calculate_ranks` is true, the method also calculates ranks for each worker response as
+    **Step 4**. Estimate the aggregated result. It is the output whose embedding is the closest one to
+    $\hat{e}_i$. If `calculate_ranks` is True, the method also calculates ranks for each worker response as
     $s_i^k = \beta_k \exp\left(-\frac{\|e_i^k - \hat{e}_i\|^2}{\|e_i^k\|^2\|\hat{e}_i\|^2}\right) + \gamma_i^k$.
 
     Jiyi Li. Crowdsourced Text Sequence Aggregation based on Hybrid Reliability and Representation.

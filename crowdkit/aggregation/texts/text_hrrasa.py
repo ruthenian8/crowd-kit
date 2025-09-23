@@ -19,10 +19,10 @@ class TextHRRASA(BaseTextsAggregator):
     Args:
         encoder: A callable that takes a text and returns a NumPy array containing the corresponding embedding.
         n_iter: A number of HRRASA iterations.
-        lambda_emb: A weight of reliability calculated on embeddigs.
+        lambda_emb: A weight of reliability calculated on embeddings.
         lambda_out: A weight of reliability calculated on outputs.
         alpha: Confidence level of chi-squared distribution quantiles in beta parameter formula.
-        calculate_ranks: If true, calculate additional attribute `ranks_`.
+        calculate_ranks: If True, calculate additional attribute `ranks_`.
 
     Examples:
         We suggest to use sentence encoders provided by [Sentence Transformers](https://www.sbert.net).

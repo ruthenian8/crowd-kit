@@ -124,7 +124,7 @@ def uncertainty(
             worker skills if not provided.
         compute_by: what to compute uncertainty for. If 'task', compute uncertainty of answers per task.
             If 'worker', compute uncertainty for each worker.
-        aggregate: If true, return the mean uncertainty, otherwise return uncertainties for each task or worker.
+        aggregate: If True, return the mean uncertainty, otherwise return uncertainties for each task or worker.
 
     Returns:
         Union[float, pd.Series]

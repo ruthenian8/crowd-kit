@@ -31,7 +31,7 @@ class RASA(BaseEmbeddingsAggregator):
     |\mathcal{V}_k|)}}{\sum_i\left(\|e_i^k - \hat{e}_i\|^2\right)}$, where $\mathcal{V}_k$
     is a set of tasks completed by the worker $k$.
 
-    **Step 3**. Estimate the aggregated result. It is the output which embedding is
+    **Step 3**. Estimate the aggregated result. It is the output whose embedding is
     the closest one to $\hat{e}_i$.
 
     Jiyi Li, Fumiyo Fukumoto. A Dataset of Crowdsourced Word Sequences: Collections and Answer Aggregation for Ground Truth Creation.

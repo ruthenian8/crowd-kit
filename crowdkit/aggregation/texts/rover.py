@@ -63,7 +63,7 @@ class ROVER(BaseTextsAggregator):
     """A callable that takes a list of tokens and returns a string."""
 
     silent: bool = attr.ib(default=True)
-    """If false, show a progress bar."""
+    """If False, show a progress bar."""
 
     # Available after fit
     # texts_
