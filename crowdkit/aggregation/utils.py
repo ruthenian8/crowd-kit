@@ -185,7 +185,7 @@ def get_accuracy(
 
 
 def named_series_attrib(name: str) -> "pd.Series[Any]":
-    """Attrs attribute with converter and setter which preserves specified attribute name"""
+    """Attrs attribute with converter and setter which preserves specified attribute name."""
 
     def converter(series: "pd.Series[Any]") -> "pd.Series[Any]":
         series.name = name

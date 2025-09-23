@@ -18,22 +18,22 @@ def entropy_threshold(
     min_answers: int = 2,
 ) -> pd.DataFrame:
     """Entropy thresholding postprocessing: filters out all answers by workers,
-    whos' entropy (uncertanity) of answers is below specified percentile.
+    whose entropy (uncertainty) of answers is below specified percentile.
 
-    This heuristic detects answers of workers that answer the same way too often, e.g. when "speed-running" by only
+    This heuristic detects answers of workers that answer the same way too often, e.g., when "speed-running" by only
     clicking one button.
 
     Args:
         answers (pandas.DataFrame): A data frame containing `task`, `worker` and `label` columns.
-        workers_skills (Optional[pandas.Series]): workers skills e.g. golden set skills.
-        percentile (int): threshold entropy percentile from 0 to 100. Default: 10.
-        min_answers (int): worker can be filtered out if he left at least that many answers.
+        workers_skills (Optional[pandas.Series]): Workers skills, e.g., golden set skills.
+        percentile (int): Threshold entropy percentile from 0 to 100. Default: 10.
+        min_answers (int): Worker can be filtered out if he left at least that many answers.
 
     Returns:
-        pd.DataFrame
+        pd.DataFrame: Filtered DataFrame with answers from workers above the entropy threshold.
 
     Examples:
-        Fraudent worker always answers the same and gets filtered out.
+        Fraudulent worker always answers the same and gets filtered out.
 
         >>> answers = pd.DataFrame.from_records(
         >>>     [

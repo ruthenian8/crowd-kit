@@ -43,7 +43,7 @@ class HRRASA(BaseClassificationAggregator):
     where $\mathcal{U_i}$ is a set of workers' responses on task $i$.
 
     The $\gamma_{i,seq}^k$ value uses some similarity measure $sim$ on the `output` data,
-    e.g. GLEU similarity on texts:
+    e.g., GLEU similarity on texts:
     $\gamma_{i,seq}^k = \frac{1}{|\mathcal{U}_i| - 1}\sum_{a_i^{k'} \in \mathcal{U}_i, k \neq k'}sim(a_i^k, a_i^{k'})$.
 
     **Step 3**. Estimate the *global* workers' reliabilities $\beta$ by iteratively performing two steps:

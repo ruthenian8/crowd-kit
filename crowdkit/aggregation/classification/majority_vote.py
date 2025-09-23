@@ -18,7 +18,7 @@ from ..utils import (
 @attr.s
 class MajorityVote(BaseClassificationAggregator):
     r"""The **Majority Vote** aggregation algorithm is a straightforward approach for categorical aggregation: for each task,
-    it outputs a label with the largest number of responses. Additionaly, the Majority Vote
+    it outputs a label with the largest number of responses. Additionally, the Majority Vote
     can be used when different weights are assigned to workers' votes. In this case, the
     resulting label will have the largest sum of weights.
 

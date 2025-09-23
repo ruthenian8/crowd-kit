@@ -17,7 +17,7 @@ class BinaryRelevance(BaseClassificationAggregator):
 
     Binary Relevance is a straightforward approach for multi-label classification aggregation:
     each label is treated as a class in binary classification problem and aggregated separately using
-    aggregation algorithms for classification, e.g. Majority Vote or Dawid Skene.
+    aggregation algorithms for classification, e.g., Majority Vote or Dawid Skene.
 
     Note:
         If this method is used for single-label classification, the output of the BinaryRelevance method may differ
