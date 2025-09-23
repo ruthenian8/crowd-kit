@@ -92,9 +92,9 @@ Below is the list of currently implemented methods, including the already availa
 
 ### Multi-Label Responses
 
-|Method|Status|
-|-|:-:|
-|[Binary Relevance](https://toloka.ai/docs/crowd-kit/reference/crowdkit.aggregation.multilabel.binary_relevance.BinaryRelevance)|✅|
+| Method | Status |
+| ------------- | :-------------: |
+| [Binary Relevance](https://toloka.ai/docs/crowd-kit/reference/crowdkit.aggregation.multilabel.binary_relevance.BinaryRelevance) | ✅ |
 
 ### Textual Responses
 
@@ -121,14 +121,14 @@ Below is the list of currently implemented methods, including the already availa
 
 ### Learning from Crowds
 
-|Method|Status|
-|-|:-:|
-|[CrowdLayer](https://toloka.ai/docs/crowd-kit/reference/crowdkit.learning.crowd_layer.CrowdLayer)|✅|
-|[CoNAL](https://toloka.ai/docs/crowd-kit/reference/crowdkit.learning.conal.CoNAL)|✅|
+| Method | Status |
+| ------------- | :-------------: |
+| [CrowdLayer](https://toloka.ai/docs/crowd-kit/reference/crowdkit.learning.crowd_layer.CrowdLayer) | ✅ |
+| [CoNAL](https://toloka.ai/docs/crowd-kit/reference/crowdkit.learning.conal.CoNAL) | ✅ |
 
 ## Citation
 
-* Ustalov D., Pavlichenko N., Tseitlin B. (2024). [Learning from Crowds with Crowd-Kit](https://doi.org/10.21105/joss.06227). Journal of Open Source Software, 9(96), 6227
+- Ustalov D., Pavlichenko N., Tseitlin B. (2024). [Learning from Crowds with Crowd-Kit](https://doi.org/10.21105/joss.06227). Journal of Open Source Software, 9(96), 6227
 
 ```bibtex
 @article{CrowdKit,

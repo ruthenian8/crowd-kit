@@ -21,7 +21,7 @@ Crowd-Kit's API resembles that of scikit-learn. We recommend checking out our ex
 
 ## Citation
 
-* Ustalov D., Pavlichenko N., Tseitlin B. (2024). [Learning from Crowds with Crowd-Kit](https://doi.org/10.21105/joss.06227). Journal of Open Source Software, 9(96), 6227
+- Ustalov D., Pavlichenko N., Tseitlin B. (2024). [Learning from Crowds with Crowd-Kit](https://doi.org/10.21105/joss.06227). Journal of Open Source Software, 9(96), 6227
 
 ```bibtex
 @article{CrowdKit,
