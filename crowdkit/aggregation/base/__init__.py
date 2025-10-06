@@ -16,7 +16,7 @@ from ..utils import named_series_attrib
 
 @attr.s
 class BaseClassificationAggregator:
-    """This is a base class for all classification aggregators
+    """This is a base class for all classification aggregators.
 
     Attributes:
         labels_ (typing.Optional[pandas.core.series.Series]): Tasks' labels.
@@ -43,19 +43,19 @@ class BaseClassificationAggregator:
         Returns:
             Series: Tasks' labels.
                 A pandas.Series indexed by `task` such that `labels.loc[task]`
-                is the tasks's most likely true label.
+                is the task's most likely true label.
         """
         raise NotImplementedError()
 
 
 @attr.s
 class BaseImageSegmentationAggregator:
-    """This is a base class for all image segmentation aggregators
+    """This is a base class for all image segmentation aggregators.
 
     Attributes:
         segmentations_ (Series): Tasks' segmentations.
             A pandas.Series indexed by `task` such that `labels.loc[task]`
-            is the tasks's aggregated segmentation.
+            is the task's aggregated segmentation.
     """
 
     segmentations_: "pd.Series[Any]" = named_series_attrib(name="agg_segmentation")
@@ -63,7 +63,7 @@ class BaseImageSegmentationAggregator:
     def fit(self, data: pd.DataFrame) -> "BaseImageSegmentationAggregator":
         """Args:
             data (DataFrame): Workers' segmentations.
-                A pandas.DataFrame containing `worker`, `task` and `segmentation` columns'.
+                A pandas.DataFrame containing `worker`, `task` and `segmentation` columns.
 
         Returns:
             BaseImageSegmentationAggregator: self.
@@ -73,19 +73,19 @@ class BaseImageSegmentationAggregator:
     def fit_predict(self, data: pd.DataFrame) -> "pd.Series[Any]":
         """Args:
             data (DataFrame): Workers' segmentations.
-                A pandas.DataFrame containing `worker`, `task` and `segmentation` columns'.
+                A pandas.DataFrame containing `worker`, `task` and `segmentation` columns.
 
         Returns:
             Series: Tasks' segmentations.
                 A pandas.Series indexed by `task` such that `labels.loc[task]`
-                is the tasks's aggregated segmentation.
+                is the task's aggregated segmentation.
         """
         raise NotImplementedError()
 
 
 @attr.s
 class BaseEmbeddingsAggregator:
-    """This is a base class for all embeddings aggregators
+    """This is a base class for all embeddings aggregators.
     Attributes:
         embeddings_and_outputs_ (DataFrame): Tasks' embeddings and outputs.
             A pandas.DataFrame indexed by `task` with `embedding` and `output` columns.
@@ -115,7 +115,7 @@ class BaseEmbeddingsAggregator:
 
 @attr.s
 class BaseTextsAggregator:
-    """This is a base class for all texts aggregators
+    """This is a base class for all texts aggregators.
     Attributes:
         texts_ (Series): Tasks' texts.
             A pandas.Series indexed by `task` such that `result.loc[task, text]`
@@ -147,7 +147,7 @@ class BaseTextsAggregator:
 
 @attr.s
 class BasePairwiseAggregator:
-    """This is a base class for all pairwise comparison aggregators
+    """This is a base class for all pairwise comparison aggregators.
     Attributes:
         scores_ (Series): 'Labels' scores.
             A pandas.Series index by labels and holding corresponding label's scores
@@ -158,7 +158,7 @@ class BasePairwiseAggregator:
     def fit(self, data: pd.DataFrame) -> "BasePairwiseAggregator":
         """Args:
             data (DataFrame): Workers' pairwise comparison results.
-                A pandas.DataFrame containing `worker`, `left`, `right`, and `label` columns'.
+                A pandas.DataFrame containing `worker`, `left`, `right`, and `label` columns.
                 For each row `label` must be equal to either `left` column or `right` column.
 
         Returns:
@@ -169,7 +169,7 @@ class BasePairwiseAggregator:
     def fit_predict(self, data: pd.DataFrame) -> "pd.Series[Any]":
         """Args:
             data (DataFrame): Workers' pairwise comparison results.
-                A pandas.DataFrame containing `worker`, `left`, `right`, and `label` columns'.
+                A pandas.DataFrame containing `worker`, `left`, `right`, and `label` columns.
                 For each row `label` must be equal to either `left` column or `right` column.
 
         Returns:

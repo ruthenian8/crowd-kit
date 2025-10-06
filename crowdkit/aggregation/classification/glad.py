@@ -113,7 +113,7 @@ class GLAD(BaseClassificationAggregator):
         betas: "pd.Series[Any]",
         priors: "pd.Series[Any]",
     ) -> pd.DataFrame:
-        """Makes a data frame with format `(task, worker, label, variable) -> (alpha, beta, posterior, delta)`"""
+        """Makes a data frame with format `(task, worker, label, variable) -> (alpha, beta, posterior, delta)`."""
         labels = list(priors.index)
         data = data.set_index("task")
         data[labels] = 0
@@ -164,7 +164,7 @@ class GLAD(BaseClassificationAggregator):
     def _gradient_Q(
         self, data: pd.DataFrame
     ) -> Tuple["pd.Series[Any]", "pd.Series[Any]"]:
-        """Computes gradient of loss function"""
+        """Computes gradient of loss function."""
 
         sigma = scipy.special.expit(data["alpha"] * np.exp(data["beta"]))
         # multiply by exponent of beta because of beta -> exp(beta) reparameterization
@@ -190,7 +190,7 @@ class GLAD(BaseClassificationAggregator):
         return dQalpha, dQbeta
 
     def _compute_Q(self, data: pd.DataFrame) -> float:
-        """Computes loss function"""
+        """Computes loss function."""
 
         alpha_beta = data["alpha"] * np.exp(data["beta"])
         log_sigma = -self._softplus(-alpha_beta)
@@ -214,13 +214,13 @@ class GLAD(BaseClassificationAggregator):
         return float(Q)
 
     def _optimize_f(self, x: npt.NDArray[Any]) -> float:
-        """Computes loss by parameters represented by numpy array"""
+        """Computes loss by parameters represented by numpy array."""
         alpha, beta = self._get_alphas_betas_by_point(x)
         self._update_alphas_betas(alpha, beta)
         return -self._compute_Q(self._current_data)
 
     def _optimize_df(self, x: npt.NDArray[Any]) -> npt.NDArray[Any]:
-        """Computes loss gradient by parameters represented by numpy array"""
+        """Computes loss gradient by parameters represented by numpy array."""
         alpha, beta = self._get_alphas_betas_by_point(x)
         self._update_alphas_betas(alpha, beta)
         dQalpha, dQbeta = self._gradient_Q(self._current_data)

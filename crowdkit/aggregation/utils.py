@@ -124,7 +124,7 @@ def manage_data(
     Args:
         data (DataFrame): Workers' labeling results.
             A pandas.DataFrame containing `task`, `worker` and `label` columns.
-        skills (Series): workers' skills.
+        skills (Series): Workers' skills.
             A pandas.Series index by workers and holding corresponding worker's skill
     """
     data = data[["task", "worker", "label"]]
@@ -154,7 +154,7 @@ def get_accuracy(
             is the tasks's ground truth label.
 
     Returns:
-        Series: workers' skills.
+        Series: Workers' skills.
             A pandas.Series index by workers and holding corresponding worker's skill
     """
     if "weight" in data.columns:
@@ -185,7 +185,7 @@ def get_accuracy(
 
 
 def named_series_attrib(name: str) -> "pd.Series[Any]":
-    """Attrs attribute with converter and setter which preserves specified attribute name"""
+    """Attrs attribute with converter and setter which preserves specified attribute name."""
 
     def converter(series: "pd.Series[Any]") -> "pd.Series[Any]":
         series.name = name
@@ -202,7 +202,7 @@ def add_skills_to_data(
 ) -> pd.DataFrame:
     """
     Args:
-        skills (Series): workers' skills.
+        skills (Series): Workers' skills.
             A pandas.Series index by workers and holding corresponding worker's skill
         on_missing_skill (str): How to handle assignments done by workers with unknown skill.
             Possible values:

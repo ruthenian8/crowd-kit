@@ -18,8 +18,8 @@ class TextSummarization(BaseTextsAggregator):
     """Text Aggregation through Summarization
 
     The method uses a pre-trained language model for summarization to aggregate crowdsourced texts.
-    For each task, texts are concateneted by ` | ` token and passed as a model's input. If
-    `n_permutations` is not `None`, texts are random shuffled `n_permutations` times and then
+    For each task, texts are concatenated by ` | ` token and passed as a model's input. If
+    `n_permutations` is not `None`, texts are randomly shuffled `n_permutations` times and then
     outputs are aggregated with `permutation_aggregator` if provided. If `permutation_aggregator`
     is not provided, the resulting aggregate is the most common output over permuted inputs.
 

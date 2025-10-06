@@ -65,7 +65,7 @@ class NoisyBradleyTerry(BasePairwiseAggregator):
     """The state of the random number generator."""
 
     skills_: "pd.Series[Any]" = named_series_attrib(name="skill")
-    """A pandas.Series index by workers and holding corresponding worker's skill"""
+    """A pandas.Series index by workers and holding corresponding worker's skill."""
 
     biases_: "pd.Series[Any]" = named_series_attrib(name="bias")
     """Predicted biases for each worker. Indicates the probability of a worker to choose the left item.

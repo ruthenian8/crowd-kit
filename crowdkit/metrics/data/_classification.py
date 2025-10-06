@@ -25,7 +25,7 @@ def _check_answers(answers: pd.DataFrame) -> None:
 
 
 def _label_probability(row: "pd.Series[Any]", label: Any, n_labels: int) -> float:
-    """Numerator in the Bayes formula"""
+    """Numerator in the Bayes formula."""
     if row["label"] == label:
         return float(row["skill"])
     else:
@@ -33,7 +33,7 @@ def _label_probability(row: "pd.Series[Any]", label: Any, n_labels: int) -> floa
 
 
 def _task_consistency(row: "pd.Series[Any]") -> float:
-    """Posterior probability for a single task"""
+    """Posterior probability for a single task."""
     if row["denominator"] != 0:
         return float(row[row["aggregated_label"]]) / float(row["denominator"])
     else:
@@ -52,10 +52,10 @@ def consistency(
 
     Args:
         answers (pandas.DataFrame): A data frame containing `task`, `worker` and `label` columns.
-        workers_skills (Optional[pandas.Series]): workers skills e.g. golden set skills. If not provided,
+        workers_skills (Optional[pandas.Series]): Workers skills, e.g., golden set skills. If not provided,
             uses aggregator's `workers_skills` attribute.
-        aggregator (aggregation.base.BaseClassificationAggregator): aggregation method, default: MajorityVote
-        by_task (bool): if set, returns consistencies for every task in provided data frame.
+        aggregator (aggregation.base.BaseClassificationAggregator): Aggregation method, default: MajorityVote
+        by_task (bool): If set, returns consistencies for every task in provided data frame.
 
     Returns:
         Union[float, pd.Series]
@@ -117,14 +117,14 @@ def uncertainty(
 
     Args:
         answers: A data frame containing `task`, `worker` and `label` columns.
-        workers_skills: workers skills e.g. golden set skills. If not provided,
+        workers_skills: Workers skills, e.g., golden set skills. If not provided,
             but aggregator provided, uses aggregator's `workers_skills` attribute.
             Otherwise assumes equal skills for workers.
         aggregator: aggregation method to obtain
             worker skills if not provided.
         compute_by: what to compute uncertainty for. If 'task', compute uncertainty of answers per task.
             If 'worker', compute uncertainty for each worker.
-        aggregate: If true, return the mean uncertainty, otherwise return uncertainties for each task or worker.
+        aggregate: If True, return the mean uncertainty, otherwise return uncertainties for each task or worker.
 
     Returns:
         Union[float, pd.Series]
