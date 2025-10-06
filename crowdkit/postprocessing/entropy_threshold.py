@@ -18,22 +18,22 @@ def entropy_threshold(
     min_answers: int = 2,
 ) -> pd.DataFrame:
     """Entropy thresholding postprocessing: filters out all answers by workers,
-    whose entropy (uncertainty) of answers is below specified percentile.
+    whose entropy (uncertainty) of answers is below a specified percentile.
 
-    This heuristic detects answers of workers that answer the same way too often, e.g., when "speed-running" by only
+    This heuristic detects answers from workers who answer in the same way too often, e.g., when "speed-running" by only
     clicking one button.
 
     Args:
         answers (pandas.DataFrame): A data frame containing `task`, `worker` and `label` columns.
-        workers_skills (Optional[pandas.Series]): Workers skills, e.g., golden set skills.
+        workers_skills (Optional[pandas.Series]): Workers' skills, e.g., golden set skills.
         percentile (int): Threshold entropy percentile from 0 to 100. Default: 10.
-        min_answers (int): Worker can be filtered out if he left at least that many answers.
+        min_answers (int): A worker can be filtered out if they left at least that many answers.
 
     Returns:
         pd.DataFrame: Filtered DataFrame with answers from workers above the entropy threshold.
 
     Examples:
-        Fraudulent worker always answers the same and gets filtered out.
+        A fraudulent worker always answers in the same way and gets filtered out.
 
         >>> answers = pd.DataFrame.from_records(
         >>>     [
@@ -54,8 +54,8 @@ def entropy_threshold(
     Args:
         answers (DataFrame): Workers' labeling results.
             A pandas.DataFrame containing `task`, `worker` and `label` columns.
-        workers_skills (typing.Optional[pandas.core.series.Series]): workers' skills.
-            A pandas.Series index by workers and holding corresponding worker's skill
+        workers_skills (typing.Optional[pandas.core.series.Series]): Workers' skills.
+            A pandas.Series index by workers and holding corresponding worker's skill.
     """
 
     answers_per_worker = answers.groupby("worker")["label"].count()
