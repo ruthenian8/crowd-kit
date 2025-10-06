@@ -96,7 +96,7 @@ class CoNAL(nn.Module):
         self, input: torch.Tensor, workers: torch.Tensor
     ) -> torch.Tensor:
         """
-        Common noise adoptation module.
+        Common noise adaptation module.
 
         Args:
             input (torch.Tensor): Tensor of shape (batch_size, embedding_size)
